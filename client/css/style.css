@@ -1,0 +1,376 @@
+:root {
+    --primary: #EB595F;
+    --secondary: #3C3C3C;
+    --accent: #59EBB1;
+    --border: rgba(60, 60, 60, 0.25);
+
+    --error-color: rgb(0, 0, 0);
+
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1280px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 1rem 2rem;
+}
+#logo {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    font-weight: bold;
+    margin: 1rem;
+    padding: 0;
+
+    .logoLetter {
+        color: var(--accent);
+    }
+}
+
+.nav-bar {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    padding: 0;
+    margin: 0;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.nav-bar button {
+    cursor: pointer;
+    width: 7.5rem;
+    height: 3rem;
+    padding: 0;
+    margin: 0 2rem;
+    font-size: 20px;
+    gap: .5rem;
+}
+
+
+button {
+    background-color: var(--accent);
+    color: var(--primary);
+    border: 2px solid var(--secondary);
+    padding: 0;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--border) 2px 2px 0 0;
+}
+
+
+section {
+
+}
+
+
+.container {
+    margin: 2.5rem 6.75rem;
+    display: flex;
+    flex-direction: column;
+
+    section {
+        margin: 2rem 0;
+    }
+
+}
+
+.nieuws-en-evenementen img {
+    width: 12.125rem;
+    object-fit: cover;
+
+}
+.nieuws-en-evenementen {
+    flex-direction: revert;
+}
+
+.vertical-line {
+    padding: .01rem;
+    margin: 0 1rem;
+    background-color: var(--secondary);
+}
+
+.evenement-section {
+    display: flex;
+    align-items: center;
+
+    button {
+        width: 7.5rem;
+        height: 1.5rem;
+    }
+}
+
+.gemeenschap {
+    display: flex;
+    background: var(--primary);
+    margin: revert;
+    font-size: 1.5rem;
+
+    img {
+        width: clamp(10rem, 50vw, 33rem);
+        object-fit: cover;
+    }
+
+    a {
+        color: white;
+    }
+}
+
+.gemeenschap-section {
+    margin: 2.5rem 6.75rem;
+    display: flex;
+    height: 35rem;
+    color: white;
+    gap: 1rem;
+}
+.aankomende-evenementen {
+    section {
+        display: flex;
+    }
+    div, img{
+        width: 33%;
+    }
+    img {
+        object-fit: cover;
+    }
+}
+
+
+.laat-bericht-achter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+    color: white;
+    margin: auto;
+}
+
+footer {
+    background: var(--secondary);
+    margin: 0;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+
+    nav {
+        margin: 2.5rem 6.75rem;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        gap: 1.5rem;
+    }
+
+    a {
+        color: white;
+        text-align: center;
+        padding: 0;
+        text-decoration: none;
+    }
+}
+
+
+a:hover {
+    /*font-size: 105%;*/
+    font-weight: bold;
+}
+
+
+
+
+
+
+/*  ZOEK EN FILTER STYLE */
+#genre {
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#genreUL {
+    /* Remove default list styling */
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#genreUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+#genreUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+/* FORM STYLING */
+#myForm, #searchFilter {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+
+    h2 {
+        color: var(--secondary);
+        font-weight: bold;
+    }
+
+    button {
+        width: 12.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+        margin: auto;
+    }
+
+    div {
+        width: 30rem;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    div.radiobutton {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    div.checkbox {
+        display: flex;
+        flex-direction: row;
+        align-items: top;
+        gap: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    legend {
+        margin-bottom: 0.5em;
+    }
+
+    /* Label */
+
+    label > span.field-label, legend > span.field-label {
+        display: block;
+        font-size: 1.3em;
+        font-weight: 600;
+    }
+
+
+    /* if there is an error */
+
+    label > span.field-error, legend > span.field-error {
+        display: inline-block;
+        margin-top: 0.25em;
+        color: var(--error-color);
+    }
+
+    /* hints or explanation for the user */
+
+    label > span.field-hint, legend > span.field-hint {
+        display: inline-block;
+        margin: 0.25em 0em;
+        color: #666;
+    }
+
+
+    input {
+        font-size: 1.2em;
+        padding: 0.75em;
+        border: var(--secondary) 2px solid;
+        width: 90%; /* fallback if calc isn't working */
+        width: calc(100% - 1.5em); /* full width minus padding */
+    }
+
+    input::placeholder {
+        color: var(--primary);
+    }
+
+    .field-label {
+        color: var(--secondary);
+
+    }
+
+    fieldset {
+        border: 0;
+        padding: 0;
+    }
+
+    input[inputmode=numeric] {
+        width: 5em; /* 5em = 16px * 5 = 80px */
+    }
+
+    input[type=radio], input[type=checkbox] {
+        width: 1.9em;
+        height: 1.9em;
+        cursor: pointer;
+    }
+
+    input[type=radio] + label,
+    input[type=checkbox] + label > span.field-label {
+        font-size: 1em;
+        font-weight: normal;
+        display: inline;
+        cursor: pointer;
+    }
+
+    input.invalid {
+        color: var(--error-color);
+        outline-color: var(--error-color);
+    }
+
+
+    label > abbr {
+        color: var(--error-color);
+        text-decoration: none;
+    }
+
+    .errorSummary {
+        display: none;
+    }
+
+    @media (min-width: 500px) {
+        body {
+            margin: 2.5em;
+        }
+
+    }
+}

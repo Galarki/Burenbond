@@ -1,0 +1,59 @@
+import {getMessages, getMessage, postMessage} from "./scripts/messageService.js";
+import {FormValidator} from "./scripts/formValidator.js";
+import {addMessage} from "./scripts/messageView.js";
+
+
+getMessages()
+// .then(data => {
+//     data.forEach(message => {
+//         addMessage(message)
+//     })
+// })
+// .catch(error => {
+//     console.error(error)
+// });
+
+
+//  Formvalidation
+const form = document.querySelector('#myForm')
+
+const formValidator = new FormValidator(form);
+
+formValidator.addValidator({
+    // name verwijst naar het name attribute op het formulierveld
+    name: 'firstname', // method ontvangt het inputveld als argument en returnt true of false
+    method: (field) => field.value.trim().length > 0,
+    message: 'Voornaam is een verplicht veld en werd niet ingevuld'
+})
+formValidator.addValidator({
+    name: 'name',
+    method: (field) => field.value.trim().length > 0,
+    message: 'Naam is een verplicht veld en werd niet ingevuld'
+})
+formValidator.addValidator({
+    name: 'email',
+    method: field => field.value.trim().match(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/),
+    message: 'Email moet volgens volgend voorbeeld: user@email.com'
+})
+formValidator.addValidator({
+    name: 'privacy',
+    method: (field) => field.value.trim().length > 0,
+    message: 'Privacy is een verplicht veld en werd niet aangeduid'
+})
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (formValidator.validate()) {
+        const message = {
+            firstname: form.elements.firstname.value,
+            name: form.elements.name.value,
+            email: form.elements.email.value,
+            message: form.elements.message.value,
+            privacy: form.elements.privacy.checked
+        }
+
+        const data = await postMessage(message);
+        console.log(data)
+    }
+});

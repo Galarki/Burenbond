@@ -1,104 +1,205 @@
 <!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="main.js"></script>
 </head>
 <body>
 <header>
-  <span id="logo">BurenBond</span>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="nieuws-en-evenementen/">Nieuws en evenmenten</a></li>
-      <li><a href="onze-gemeenschap/">Onze gemeenschap</a></li>
-      <li><a href="kaart/">Kaart</a></li>
-    </ul>
-    <button>
-      <svg></svg>
-      Login
-    </button>
-  </nav>
+    <nav class="nav-bar">
+        <span id="logo"><span class="logoLetter">B</span>uren<span class="logoLetter">B</span>ond</span>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="nieuws-en-evenementen/">Nieuws en evenmenten</a></li>
+            <li><a href="onze-gemeenschap/">Onze gemeenschap</a></li>
+            <li><a href="kaart/">Kaart</a></li>
+        </ul>
+        <button>
+            <img src="assets/login.svg" alt="Login svg">
+            Login
+        </button>
+    </nav>
 </header>
 <main>
-  <h1>Homepage</h1>
-  <section>
-    <h2>Nieuws en evenementen</h2>
-    <section>
-      <h3>Buurtbewoners woedend over nieuw circulatieplan</h3>
-      <p>In het hart van de stad groeit onvrede over het recente circulatieplan. Ooit rustige straten zijn nu
-        bronnen van frustratie. Het plan, zonder overleg ingevoerd, zorgt voor chaos. Bewoners eisen
-        inspraak en verandering. De druk op de autoriteiten neemt toe terwijl de buurtbewoners vastberaden
-        blijven strijden voor een leefbare omgeving.
-      </p>
-      <a href="">Lees meer...</a>
-    </section>
-    <section>
-      <h3>Project Zorgzame Buren komt naar onze buurt!</h3>
-      <p>Een opwindend nieuws verspreidt zich door onze buurt: het Project Zorgzame Buren komt eraan! Dit
-        initiatief brengt buurtbewoners samen in een netwerk van ondersteuning en solidariteit. Met hulp van
-        Weliswaar.be hebben we toegang tot informatie en middelen om onze zorgzame gemeenschap te
-        versterken. Samen bouwen we aan een buurt waarin niemand achterblijft en waar solidariteit ons
-        dagelijks leven vormt.</p>
-      <a href="">Lees meer...</a>
-    </section>
-    <section>
-      <h4>Lokale fietstocht</h4>
-      <p>Pak je fiets en doe mee met onze lokale fietstocht! Ontdek de charmes van onze buurt terwijl je samen
-        met je buren fietst. Doe mee op 20/05/2024 te Kalve 37, Wachtbeke en ontdek waarom deze fietstocht
-        een must is voor alle fietsliefhebbers!</p>
-      <button>Ga naar</button>
-      <img src="" alt="">
-    </section>
-    <section>
-      <h4>Walk your neighbour</h4>
-      <p>Stap uit je huis en maak kennis met je buren tijdens Walk Your Neighbour! Sluit je aan bij ons voor
-        een gezellige wandeling door de buurt en ontdek de schoonheid van verbondenheid. Kom langs op
-        21/05/2024 te Langelede 114, Wachtebeke en laten we samen onze gemeenschap versterken door te
-        wandelen!</p>
-      <img src="" alt="">
-      <button>Ga naar</button>
-    </section>
-    <section>
-      <h4>Festibuurt</h4>
-      <p>Festibuurt is terug en beter dan ooit! Het is tijd om je buren te ontmoeten, plezier te hebben en
-        herinneringen te maken op dit jaarlijkse buurtfeest. Kom en vier met ons mee op 20/05/2024 te 37
-        Kalve, Wachtebeke en ontdek waarom Festibuurt het hoogtepunt van het jaar is!</p>
-      <img src="" alt="">
-      <button>Ga naar</button>
-    </section>
-  </section>
-  <section>
-    <div>
-      <h2>Ontdek onze gemeenschap</h2>
-      <p>Welkom bij BurenBond, dé plek waar onze gemeenschap samenkomt. Ontdek lokale evenementen,
-        buurtinitiatieven, inspirerende verhalen en ondersteun lokale bedrijven. Doe mee en maak onze buurt nog
-        sterker!</p>
-      <a href="">Lees meer...</a>
-    </div>
-    <img src="" alt="">
-  </section>
-  <section>
-    <h2>Kaart</h2>
+    <h1>Homepage</h1>
+    <section class="container nieuws-en-evenementen">
+        <div>
+            <h2>Nieuws en evenementen</h2>
+            <section>
+                <h3>Buurtbewoners woedend over nieuw circulatieplan</h3>
+                <p>In het hart van de stad groeit onvrede over het recente circulatieplan. Ooit rustige straten zijn nu
+                    bronnen van frustratie. Het plan, zonder overleg ingevoerd, zorgt voor chaos. Bewoners eisen
+                    inspraak en verandering. De druk op de autoriteiten neemt toe terwijl de buurtbewoners vastberaden
+                    blijven strijden voor een leefbare omgeving.
+                </p>
+                <a href="">Lees meer...</a>
+            </section>
+            <section>
+                <h3>Project Zorgzame Buren komt naar onze buurt!</h3>
+                <p>Een opwindend nieuws verspreidt zich door onze buurt: het Project Zorgzame Buren komt eraan! Dit
+                    initiatief brengt buurtbewoners samen in een netwerk van ondersteuning en solidariteit. Met hulp van
+                    Weliswaar.be hebben we toegang tot informatie en middelen om onze zorgzame gemeenschap te
+                    versterken. Samen bouwen we aan een buurt waarin niemand achterblijft en waar solidariteit ons
+                    dagelijks leven vormt.</p>
+                <a href="">Lees meer...</a>
+            </section>
+        </div>
+        <div class="vertical-line"></div>
+        <div>
+            <section class="evenement-section">
+                <div>
+                    <h4>Lokale fietstocht</h4>
+                    <p>Pak je fiets en doe mee met onze lokale fietstocht! Ontdek de charmes van onze buurt terwijl je
+                        samen
+                        met je buren fietst. Doe mee op 20/05/2024 te Kalve 37, Wachtbeke en ontdek waarom deze
+                        fietstocht
+                        een must is voor alle fietsliefhebbers!</p>
+                    <button>Ga naar ></button>
+                </div>
+                <img src="assets/wielrenners.jpg" alt="">
+            </section>
+            <section class="evenement-section">
+                <div>
+                    <h4>Walk your neighbour</h4>
+                    <p>Stap uit je huis en maak kennis met je buren tijdens Walk Your Neighbour! Sluit je aan bij ons
+                        voor
+                        een gezellige wandeling door de buurt en ontdek de schoonheid van verbondenheid. Kom langs op
+                        21/05/2024 te Langelede 114, Wachtebeke en laten we samen onze gemeenschap versterken door te
+                        wandelen!</p>
+                    <button>Ga naar ></button>
+                </div>
+                <img src="assets/wandelen.jpg" alt="">
 
-  </section>
-  <section>
-    <h2>Laat een bericht achter</h2>
-  </section>
+            </section>
+            <section class="evenement-section">
+                <div>
+                    <h4>Festibuurt</h4>
+                    <p>Festibuurt is terug en beter dan ooit! Het is tijd om je buren te ontmoeten, plezier te hebben en
+                        herinneringen te maken op dit jaarlijkse buurtfeest. Kom en vier met ons mee op 20/05/2024 te 37
+                        Kalve, Wachtebeke en ontdek waarom Festibuurt het hoogtepunt van het jaar is!</p>
+                    <button>Ga naar ></button>
+                </div>
+                <img src="assets/festival.jpg" alt="">
+
+            </section>
+        </div>
+    </section>
+    <section class="container gemeenschap">
+        <div class="gemeenschap-section">
+            <div>
+                <h2>Ontdek onze gemeenschap</h2>
+                <p>Welkom bij BurenBond, dé plek waar onze gemeenschap samenkomt. Ontdek lokale evenementen,
+                    buurtinitiatieven, inspirerende verhalen en ondersteun lokale bedrijven. Doe mee en maak onze buurt
+                    nog
+                    sterker!</p>
+                <a href="">Lees meer...</a>
+            </div>
+            <img src="assets/gemeenschap.jpg" alt="foto van onze gemeenschap">
+        </div>
+    </section>
+    <section class="container">
+        <h2>Kaart</h2>
+
+    </section>
+    <section class="container laat-bericht-achter">
+        <form id="myForm" action="#" novalidate>
+            <h2>Laat een bericht achter</h2>
+            <div class="errorSummary"
+                 role="group"
+                 aria-labelledby="errorSummary-heading"
+                 tabindex="-1">
+                <h2 id="errorSummary-heading">Er is een probleem</h2>
+                <ul></ul>
+            </div>
+            <div>
+                <label for="firstname">
+                    <span class="field-label">Voornaam</span>
+                    <!-- <span class="field-hint">Voornaam</span> -->
+                    <!-- <span class="field-error">Voornaam is verplicht</span> -->
+                </label>
+                <input type="text"
+                       name="firstname"
+                       id="firstname"
+                       autocomplete="given-name"
+                       placeholder="Voornaam"
+                       required
+                       autofocus
+                       tabindex="0">
+            </div>
+
+            <div>
+                <label for="name">
+                    <span class="field-label">Naam</span>
+                    <!-- <span class="field-hint">Naam</span> -->
+                    <!-- <span class="field-error">Naam is verplicht</span> -->
+
+                </label>
+                <input type="text"
+                       name="name"
+                       id="name"
+                       autocomplete="family-name"
+                       placeholder="Naam"
+                       required>
+            </div>
+            <div>
+                <label for="email">
+                    <span class="field-label">E-mail</span>
+                    <!-- <span class="field-hint">E-mail</span> -->
+                    <!-- <span class="field-error">E-mail is verplicht</span> -->
+                </label>
+                <input type="text"
+                       name="email"
+                       id="email"
+                       autocomplete="email"
+                       placeholder="E-mail"
+                       required>
+            </div>
+            <div>
+                <label for="message">
+                    <span class="field-label">Bericht</span>
+                    <!-- <span class="field-hint">Naam</span> -->
+                    <!-- <span class="field-error">Naam is verplicht</span> -->
+
+                </label>
+                <input type="text"
+                       name="message"
+                       id="message"
+                       placeholder="Bericht"
+                       required>
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox"
+                       id="privacy"
+                       name="privacy"
+                       required>
+                <label for="privacy">
+                    <span class="field-label">*Door dit aan te duiden ga je akkoord met de privacyverklaring.
+                        <abbr title="required">*</abbr>
+                    </span>
+                </label>
+            </div>
+            <div>
+                <button type="submit">Verstuur</button>
+            </div>
+        </form>
+    </section>
 </main>
 
 <footer>
-  <nav>
-    <ul>
-      <li><a href="">Home</a></li>
-      <li><a href="">Nieuws en evenmenten</a></li>
-      <li><a href="">Onze gemeenschap</a></li>
-      <li><a href="">Kaart</a></li>
-    </ul>
-  </nav>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Nieuws en evenmenten</a></li>
+            <li><a href="">Onze gemeenschap</a></li>
+            <li><a href="">Kaart</a></li>
+        </ul>
+    </nav>
 </footer>
 </body>
 </html>

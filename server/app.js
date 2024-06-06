@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(express.json());
 
 //  2. Routes and route handlers
-app.use(messageRouter);
+app.use('/api/v1/messages', messageRouter);
 
 
 export { app }
