@@ -1,4 +1,4 @@
-import {getMessages, getMessage, postMessage} from "./scripts/messageService.js";
+import {getMessages, getMessage, postMessage, deleteMessage} from "./scripts/messageService.js";
 import {FormValidator} from "./scripts/formValidator.js";
 import {addMessageBox} from "./scripts/messageView.js";
 
@@ -16,6 +16,9 @@ getMessages()
 //     console.error(error)
 // });
 
+// TODO: Filters JS toevoegen + values om te filteren
+// TODO: Tables aanmaken evenementen + nieuws
+// TODO: Admin page aanmaken met login & overzicht gegevens.
 
 //  Formvalidation
 const form = document.querySelector('#myForm')
@@ -39,6 +42,11 @@ formValidator.addValidator({
     message: 'Email moet volgens volgend voorbeeld: user@email.com'
 })
 formValidator.addValidator({
+    name: 'message',
+    method: (field) => field.value.trim().length > 0,
+    message: 'Bericht is een verplicht veld en werd niet ingevuld'
+})
+formValidator.addValidator({
     name: 'privacy',
     method: (field) => field.value.trim().length > 0,
     message: 'Privacy is een verplicht veld en werd niet aangeduid'
@@ -59,4 +67,12 @@ form.addEventListener('submit', async (e) => {
         const data = await postMessage(message);
         console.log(data)
     }
+});
+
+const btn = document.querySelector('#temp');
+
+btn.addEventListener('click', async () => {
+    console.log('deleted');
+    console.log(data)
+
 });

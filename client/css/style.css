@@ -3,6 +3,7 @@
     --secondary: #3C3C3C;
     --accent: #59EBB1;
     --border: rgba(60, 60, 60, 0.25);
+    --white: #F4F3F2;
 
     --error-color: rgb(0, 0, 0);
 
@@ -57,8 +58,10 @@ h1 {
     margin: 0;
 
     a {
-        color: white;
+        color: var(--white);
         text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
     }
 }
 
@@ -131,7 +134,9 @@ section {
     display: flex;
     background: var(--primary);
     margin: revert;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--white);
+
 
     img {
         width: clamp(10rem, 50vw, 33rem);
@@ -139,15 +144,14 @@ section {
     }
 
     a {
-        color: white;
+        color: var(--white);
     }
 }
 
 .gemeenschap-section {
     margin: 2.5rem 6.75rem;
     display: flex;
-    height: 35rem;
-    color: white;
+    min-height: 35rem;
     gap: 1rem;
 }
 .aankomende-evenementen {
@@ -168,7 +172,7 @@ section {
     justify-content: center;
     align-items: center;
     background: var(--primary);
-    color: white;
+    color: var(--white);
     margin: auto;
 }
 
@@ -192,7 +196,7 @@ footer {
     }
 
     a {
-        color: white;
+        color: var(--white);
         text-align: center;
         padding: 0;
         text-decoration: none;
@@ -373,4 +377,9 @@ a:hover {
         }
 
     }
+}
+
+#searchFilter {
+    display: flex;
+    flex-direction: row;
 }
