@@ -4,7 +4,7 @@ export const getMessages = async () => {
         const data = await response.json()
         console.log(data);
 
-        return data;
+        return data.data;
     } catch (error) {
         console.error(`Failed to fetch messages: ${error}`)
     }

@@ -1,9 +1,12 @@
 import {getMessages, getMessage, postMessage} from "./scripts/messageService.js";
 import {FormValidator} from "./scripts/formValidator.js";
-import {addMessage} from "./scripts/messageView.js";
+import {addMessageBox} from "./scripts/messageView.js";
 
+const container = document.querySelector('#messages');
 
 getMessages()
+    .then(messages => messages.forEach(message => addMessageBox(message, container)))
+    .catch(error => console.error(error));
 // .then(data => {
 //     data.forEach(message => {
 //         addMessage(message)

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Homepage</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="../main.js"></script>
 </head>
 <body>
 <header>
@@ -27,84 +28,87 @@
 <main>
     <section>
         <h1>Berichten</h1>
-        <form id="searchFilter" class="search-filter" action="#" novalidate>
-            <div class="errorSummary"
-                 role="group"
-                 aria-labelledby="errorSummary-heading"
-                 tabindex="-1">
-                <h2 id="errorSummary-heading">Er is een probleem</h2>
-                <ul></ul>
-            </div>
-            <div>
-                <label for="Zoek">
-                    <span class="field-label">Zoek</span>
-                    <!-- <span class="field-hint">Voornaam</span> -->
-                    <!-- <span class="field-error">Voornaam is verplicht</span> -->
-                </label>
-                <input type="text"
-                       name="Zoek"
-                       id="zoek"
-                       placeholder="Zoek"
-                       autofocus
-                       tabindex="0">
-            </div>
-            <div>
-                <label for="date">
-                    <span class="field-label">Datum</span>
-                    <!-- <span class="field-hint">E-mail</span> -->
-                    <!-- <span class="field-error">E-mail is verplicht</span> -->
-                </label>
-                <input type="date"
-                       name="date"
-                       id="date"
-                       placeholder="Datum"
-                       required>
-            </div>
-            <div>
-                <label for="genre">
-                    <span class="field-label">Genre</span>
-                    <!-- <span class="field-hint">Naam</span> -->
-                    <!-- <span class="field-error">Naam is verplicht</span> -->
+<!--        <form id="searchFilter" class="search-filter" action="#" novalidate>-->
+<!--            <div class="errorSummary"-->
+<!--                 role="group"-->
+<!--                 aria-labelledby="errorSummary-heading"-->
+<!--                 tabindex="-1">-->
+<!--                <h2 id="errorSummary-heading">Er is een probleem</h2>-->
+<!--                <ul></ul>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <label for="Zoek">-->
+<!--                    <span class="field-label">Zoek</span>-->
+<!--                    &lt;!&ndash; <span class="field-hint">Voornaam</span> &ndash;&gt;-->
+<!--                    &lt;!&ndash; <span class="field-error">Voornaam is verplicht</span> &ndash;&gt;-->
+<!--                </label>-->
+<!--                <input type="text"-->
+<!--                       name="Zoek"-->
+<!--                       id="zoek"-->
+<!--                       placeholder="Zoek"-->
+<!--                       autofocus-->
+<!--                       tabindex="0">-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <label for="date">-->
+<!--                    <span class="field-label">Datum</span>-->
+<!--                    &lt;!&ndash; <span class="field-hint">E-mail</span> &ndash;&gt;-->
+<!--                    &lt;!&ndash; <span class="field-error">E-mail is verplicht</span> &ndash;&gt;-->
+<!--                </label>-->
+<!--                <input type="date"-->
+<!--                       name="date"-->
+<!--                       id="date"-->
+<!--                       placeholder="Datum"-->
+<!--                       required>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <label for="genre">-->
+<!--                    <span class="field-label">Genre</span>-->
+<!--                    &lt;!&ndash; <span class="field-hint">Naam</span> &ndash;&gt;-->
+<!--                    &lt;!&ndash; <span class="field-error">Naam is verplicht</span> &ndash;&gt;-->
 
-                </label>
-                <input type="text"
-                       name="genre"
-                       id="genre"
-                       placeholder="Genre"
-                       onkeyup="myFunction()"
-                       required>
-                <ul id="genreUL">
-                    <li><a href="#">Genre 1</a></li>
-                    <li><a href="#">Genre 1</a></li>
-                    <li><a href="#">Genre 1</a></li>
-                    <li><a href="#">Genre 1</a></li>
-                </ul>
-            </div>
+<!--                </label>-->
+<!--                <input type="text"-->
+<!--                       name="genre"-->
+<!--                       id="genre"-->
+<!--                       placeholder="Genre"-->
+<!--                       onkeyup="myFunction()"-->
+<!--                       required>-->
+<!--                <ul id="genreUL">-->
+<!--                    <li><a href="#">Genre 1</a></li>-->
+<!--                    <li><a href="#">Genre 1</a></li>-->
+<!--                    <li><a href="#">Genre 1</a></li>-->
+<!--                    <li><a href="#">Genre 1</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
 
-            <div>
-                <button type="submit">Verstuur</button>
-            </div>
-        </form>
-        <div>
-            <h3>Groen in de buurt</h3>
-            <p>Hey medeburen, recentelijk zijn ik en een aantal buren begonnen met onze straat op te fleuren. We hebben
-                al wat bomen, struiken en bloemen geplant en zijn nu bezig met een gemeenschappelijke moestuin op te
-                zetten. Zijn er geïnteresseerden? Zet dan even een reactie.</p>
-            <span>Gepost op 1/05/2024 door Sandra Bull</span>
-        </div>
-        <div>
-            <h3>Groen in de buurt</h3>
-            <p>Hey medeburen, recentelijk zijn ik en een aantal buren begonnen met onze straat op te fleuren. We hebben
-                al wat bomen, struiken en bloemen geplant en zijn nu bezig met een gemeenschappelijke moestuin op te
-                zetten. Zijn er geïnteresseerden? Zet dan even een reactie.</p>
-            <span>Gepost op 1/05/2024 door Sandra Bull</span>
-        </div>
-        <div>
-            <h3>Groen in de buurt</h3>
-            <p>Hey medeburen, recentelijk zijn ik en een aantal buren begonnen met onze straat op te fleuren. We hebben
-                al wat bomen, struiken en bloemen geplant en zijn nu bezig met een gemeenschappelijke moestuin op te
-                zetten. Zijn er geïnteresseerden? Zet dan even een reactie.</p>
-            <span>Gepost op 1/05/2024 door Sandra Bull</span>
+<!--            <div>-->
+<!--                <button type="submit">Verstuur</button>-->
+<!--            </div>-->
+<!--        </form>-->
+<!--        <div>-->
+<!--            <h3>Groen in de buurt</h3>-->
+<!--            <p>Hey medeburen, recentelijk zijn ik en een aantal buren begonnen met onze straat op te fleuren. We hebben-->
+<!--                al wat bomen, struiken en bloemen geplant en zijn nu bezig met een gemeenschappelijke moestuin op te-->
+<!--                zetten. Zijn er geïnteresseerden? Zet dan even een reactie.</p>-->
+<!--            <span>Gepost op 1/05/2024 door Sandra Bull</span>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <h3>Groen in de buurt</h3>-->
+<!--            <p>Hey medeburen, recentelijk zijn ik en een aantal buren begonnen met onze straat op te fleuren. We hebben-->
+<!--                al wat bomen, struiken en bloemen geplant en zijn nu bezig met een gemeenschappelijke moestuin op te-->
+<!--                zetten. Zijn er geïnteresseerden? Zet dan even een reactie.</p>-->
+<!--            <span>Gepost op 1/05/2024 door Sandra Bull</span>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <h3>Groen in de buurt</h3>-->
+<!--            <p>Hey medeburen, recentelijk zijn ik en een aantal buren begonnen met onze straat op te fleuren. We hebben-->
+<!--                al wat bomen, struiken en bloemen geplant en zijn nu bezig met een gemeenschappelijke moestuin op te-->
+<!--                zetten. Zijn er geïnteresseerden? Zet dan even een reactie.</p>-->
+<!--            <span>Gepost op 1/05/2024 door Sandra Bull</span>-->
+<!--        </div>-->
+        <div id="messages">
+
         </div>
         <button>Toon meer</button>
     </section>
