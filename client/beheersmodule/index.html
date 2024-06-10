@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="../scripts/deleteMessage.js"></script>
+</head>
+<body>
+<header>
+    <span id="logo"><span class="logoLetter">B</span>uren<span class="logoLetter">B</span>ond</span>
+    <button aria-expanded="false" class="hamburger" id="menu">
+                <span aria-hidden="true" class="icon">
+                    <span></span><span></span><span></span>
+                </span>
+        <span>Menu</span>
+    </button>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="../">Home</a></li>
+            <li><a href="../nieuws-en-evenementen/">Nieuws en evenmenten</a></li>
+            <li><a href="../onze-gemeenschap/">Onze gemeenschap</a></li>
+            <li><a href="../kaart/">Kaart</a></li>
+        </ul>
+        <a id="login" href="../login/" class="fakeBtn">
+            <img src="../assets/login.svg" alt="Login svg">
+            Login
+        </a>
+
+    </nav>
+</header>
+<main>
+    <h1>Beheersmodule</h1>
+    <section class="container berichten">
+        <h2>Berichten</h2>
+        <ul id="messages">
+
+        </ul>
+
+        <form id="deleteForm" action="#" novalidate>
+            <div>
+                <label for="deleteMessage">
+                    <span class="field-label">Verwijder bericht op ID</span>
+                    <!-- <span class="field-hint">Voornaam</span> -->
+                    <!-- <span class="field-error">Voornaam is verplicht</span> -->
+                </label>
+                <input type="text"
+                       name="deleteMessage"
+                       id="deleteMessage"
+                       placeholder="Verwijder"
+                       autofocus
+                       tabindex="0">
+            </div>
+            <div>
+                <button type="submit">Verwijder</button>
+            </div>
+        </form>
+    </section>
+    <section class="container">
+        <h2>Evenementen</h2>
+        <div>
+            <h3>Voeg toe</h3>
+        </div>
+        <div>
+            <h3>Verwijder</h3>
+        </div>
+        <div>
+            <h3>Update</h3>
+        </div>
+    </section>
+    <section class="container">
+        <h2>Nieuws</h2>
+        <div>
+            <h3>Voeg toe</h3>
+        </div>
+        <div>
+            <h3>Verwijder</h3>
+        </div>
+        <div>
+            <h3>Update</h3>
+        </div>
+    </section>
+</main>
+<footer>
+    <nav>
+        <ul>
+            <li><a href="../">Home</a></li>
+            <li><a href="../nieuws-en-evenementen/">Nieuws en evenmenten</a></li>
+            <li><a href="../onze-gemeenschap/">Onze gemeenschap</a></li>
+            <li><a href="../kaart/">Kaart</a></li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>

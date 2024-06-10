@@ -1,6 +1,6 @@
 :root {
     --primary: #EB595F;
-    --secondary: #3C3C3C;
+    --secondary: #000;
     --accent: #59EBB1;
     --border: rgba(60, 60, 60, 0.25);
     --white: #F4F3F2;
@@ -19,17 +19,19 @@ body {
     margin: 0 auto;
     padding: 0;
     max-width: 1280px;
+    color: var(--secondary);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
+    margin: .5rem 0;
     padding: 0;
 }
 
 h1 {
     margin: 1rem 2rem;
 }
+
 #logo {
     font-size: 1.5rem;
     color: var(--secondary);
@@ -42,7 +44,7 @@ h1 {
     }
 }
 
-.nav-bar {
+header, .nav-bar {
     background-color: var(--primary);
     display: flex;
     justify-content: space-between;
@@ -58,14 +60,14 @@ h1 {
     margin: 0;
 
     a {
-        color: var(--white);
+        color: var(--secondary);
         text-decoration: none;
-        font-weight: bold;
+        /*font-weight: bold;*/
         font-size: 1.1rem;
     }
 }
 
-.nav-bar button {
+.nav-bar .fakeBtn {
     cursor: pointer;
     width: 7.5rem;
     height: 3rem;
@@ -75,12 +77,17 @@ h1 {
     gap: .5rem;
 }
 
+.fakeBtn {
+    text-decoration: none;
+}
 
-button {
+button, .fakeBtn {
     background-color: var(--accent);
-    color: var(--primary);
+    color: var(--secondary);
     border: 2px solid var(--secondary);
-    padding: 0;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
     cursor: pointer;
     justify-content: center;
     display: flex;
@@ -88,9 +95,10 @@ button {
     box-shadow: var(--border) 2px 2px 0 0;
 }
 
-
-section {
-
+button:hover, .fakeBtn:hover {
+    background-color: var(--secondary);
+    color: var(--accent);
+    border: 2px solid var(--accent);
 }
 
 
@@ -98,6 +106,11 @@ section {
     margin: 2.5rem 6.75rem;
     display: flex;
     flex-direction: column;
+
+    iframe {
+        width: 100%;
+        height: 50vh;
+    }
 
     section {
         margin: 2rem 0;
@@ -110,8 +123,16 @@ section {
     object-fit: cover;
 
 }
+
 .nieuws-en-evenementen {
     flex-direction: revert;
+
+    .fakeBtn {
+        font-size: 1.2rem;
+    }
+    a {
+        color: var(--secondary);
+    }
 }
 
 .vertical-line {
@@ -124,10 +145,7 @@ section {
     display: flex;
     align-items: center;
 
-    button {
-        width: 7.5rem;
-        height: 1.5rem;
-    }
+
 }
 
 .gemeenschap {
@@ -135,7 +153,7 @@ section {
     background: var(--primary);
     margin: revert;
     font-size: 1.2rem;
-    color: var(--white);
+    color: var(--secondary);
 
 
     img {
@@ -144,7 +162,7 @@ section {
     }
 
     a {
-        color: var(--white);
+        color: var(--secondary);
     }
 }
 
@@ -154,16 +172,20 @@ section {
     min-height: 35rem;
     gap: 1rem;
 }
+
 .aankomende-evenementen {
     section {
         display: flex;
     }
-    div, img{
+
+    div, img {
         width: 33%;
     }
+
     img {
         object-fit: cover;
     }
+
 }
 
 
@@ -174,6 +196,27 @@ section {
     background: var(--primary);
     color: var(--white);
     margin: auto;
+}
+
+.berichten {
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        gap: 1rem;
+    }
+
+    li {
+        border: 1px solid var(--secondary);
+        padding: 1rem;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: .5rem 1rem;
+        margin: auto;
+    }
 }
 
 footer {
@@ -203,15 +246,10 @@ footer {
     }
 }
 
-
 a:hover {
     /*font-size: 105%;*/
     font-weight: bold;
 }
-
-
-
-
 
 
 /*  ZOEK EN FILTER STYLE */
@@ -232,6 +270,7 @@ a:hover {
     padding: 0;
     margin: 0;
 }
+
 #genreUL li a {
     border: 1px solid #ddd; /* Add a border to all links */
     margin-top: -1px; /* Prevent double borders */
@@ -245,7 +284,7 @@ a:hover {
 }
 
 /* FORM STYLING */
-#myForm, #searchFilter {
+#myForm, #searchFilter, #loginForm {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -281,7 +320,7 @@ a:hover {
     div.checkbox {
         display: flex;
         flex-direction: row;
-        align-items: top;
+        /*align-items: top;*/
         gap: 0.5em;
         margin-bottom: 0.5em;
     }
@@ -379,7 +418,132 @@ a:hover {
     }
 }
 
+.hamburger {
+    display: none;
+}
+
 #searchFilter {
     display: flex;
     flex-direction: row;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        margin: 1rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+        margin: 2.5rem 0;
+
+        section {
+            margin: 2rem 1rem;
+        }
+    }
+
+    .nieuws-en-evenementen {
+        flex-direction: column;
+
+        img {
+            width: 100%;
+        }
+
+        .vertical-line {
+            display: none;
+        }
+
+        .evenement-section {
+            flex-direction: column;
+
+        }
+
+        .fakeBtn {
+            width: clamp(10rem, 15rem, 33rem);
+            margin-bottom: 1rem;
+        }
+    }
+
+    .gemeenschap-section {
+        flex-direction: column;
+
+        img {
+            width: 100%;
+        }
+
+        margin: 2.5rem 1rem;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    #menu {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        margin: 0 1rem;
+    }
+
+    .icon > span {
+        display: block;
+        width: 2rem;
+        height: 2px;
+        background-color: var(--secondary);
+        margin: .3rem 0;
+        transition: all .3s ease-in-out;
+    }
+
+    .hamburger[aria-expanded="true"] span > span:nth-child(1) {
+        transform-origin: 35%;
+        transform: rotate(45deg);
+        transition: transform 0.4s ease;
+    }
+
+    .hamburger[aria-expanded="true"] span > span:nth-child(2) {
+        display: none;
+    }
+
+    .hamburger[aria-expanded="true"] span > span:nth-child(3) {
+        transform-origin: 35%;
+        transform: rotate(-45deg);
+        transition: transform 0.4s ease;
+    }
+    .hamburger:hover {
+        span > span {
+            background-color: var(--accent);
+        }
+    }
+
+
+
+    header nav.show {
+        display: block;
+        background-color: var(--primary);
+        position: absolute;
+        top: 6rem;
+        width: 100%;
+        padding: 1rem 0;
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            a {
+                color: var(--secondary);
+                text-decoration: none;
+                font-size: 1.1rem;
+            }
+        }
+    }
+    #login {
+        width: clamp(10rem, 15rem, 33rem);
+        margin: auto;
+    }
+
+
+
 }

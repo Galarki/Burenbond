@@ -7,22 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Homepage</title>
     <link rel="stylesheet" href="css/style.css">
-    <script type="module" src="main.js"></script>
+    <script type="module" src="main.js" defer></script>
 </head>
 <body>
 <header>
+    <span id="logo"><span class="logoLetter">B</span>uren<span class="logoLetter">B</span>ond</span>
+    <button aria-expanded="false" class="hamburger" id="menu">
+                <span aria-hidden="true" class="icon">
+                    <span></span><span></span><span></span>
+                </span>
+        <span>Menu</span>
+    </button>
     <nav class="nav-bar">
-        <span id="logo"><span class="logoLetter">B</span>uren<span class="logoLetter">B</span>ond</span>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="nieuws-en-evenementen/">Nieuws en evenmenten</a></li>
             <li><a href="onze-gemeenschap/">Onze gemeenschap</a></li>
             <li><a href="kaart/">Kaart</a></li>
         </ul>
-        <button>
+        <a id="login" href="login/" class="fakeBtn">
             <img src="assets/login.svg" alt="Login svg">
             Login
-        </button>
+        </a>
+
     </nav>
 </header>
 <main>
@@ -37,7 +44,7 @@
                     inspraak en verandering. De druk op de autoriteiten neemt toe terwijl de buurtbewoners vastberaden
                     blijven strijden voor een leefbare omgeving.
                 </p>
-                <a href="">Lees meer...</a>
+                <a href="nieuws-en-evenementen/">Lees meer...</a>
             </section>
             <section>
                 <h3>Project Zorgzame Buren komt naar onze buurt!</h3>
@@ -46,7 +53,7 @@
                     Weliswaar.be hebben we toegang tot informatie en middelen om onze zorgzame gemeenschap te
                     versterken. Samen bouwen we aan een buurt waarin niemand achterblijft en waar solidariteit ons
                     dagelijks leven vormt.</p>
-                <a href="">Lees meer...</a>
+                <a href="nieuws-en-evenementen/">Lees meer...</a>
             </section>
         </div>
         <div class="vertical-line"></div>
@@ -59,7 +66,7 @@
                         met je buren fietst. Doe mee op 20/05/2024 te Kalve 37, Wachtbeke en ontdek waarom deze
                         fietstocht
                         een must is voor alle fietsliefhebbers!</p>
-                    <button>Ga naar ></button>
+                    <a href="kaart/" class="fakeBtn">Ga naar ></a>
                 </div>
                 <img src="assets/wielrenners.jpg" alt="">
             </section>
@@ -71,7 +78,7 @@
                         een gezellige wandeling door de buurt en ontdek de schoonheid van verbondenheid. Kom langs op
                         21/05/2024 te Langelede 114, Wachtebeke en laten we samen onze gemeenschap versterken door te
                         wandelen!</p>
-                    <button>Ga naar ></button>
+                    <a href="kaart/" class="fakeBtn">Ga naar ></a>
                 </div>
                 <img src="assets/wandelen.jpg" alt="">
 
@@ -82,7 +89,7 @@
                     <p>Festibuurt is terug en beter dan ooit! Het is tijd om je buren te ontmoeten, plezier te hebben en
                         herinneringen te maken op dit jaarlijkse buurtfeest. Kom en vier met ons mee op 20/05/2024 te 37
                         Kalve, Wachtebeke en ontdek waarom Festibuurt het hoogtepunt van het jaar is!</p>
-                    <button>Ga naar ></button>
+                    <a href="kaart/" class="fakeBtn">Ga naar ></a>
                 </div>
                 <img src="assets/festival.jpg" alt="">
 
@@ -104,7 +111,9 @@
     </section>
     <section class="container">
         <h2>Kaart</h2>
-
+        <iframe
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Wachtebeke+(map)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+        </iframe>
     </section>
     <section class="container laat-bericht-achter">
         <form id="myForm" action="#" novalidate>
@@ -194,10 +203,10 @@
 <footer>
     <nav>
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Nieuws en evenmenten</a></li>
-            <li><a href="">Onze gemeenschap</a></li>
-            <li><a href="">Kaart</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="nieuws-en-evenementen/">Nieuws en evenmenten</a></li>
+            <li><a href="onze-gemeenschap/">Onze gemeenschap</a></li>
+            <li><a href="kaart/">Kaart</a></li>
         </ul>
     </nav>
 </footer>

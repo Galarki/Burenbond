@@ -7,27 +7,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Homepage</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="../main.js"></script>
+
 </head>
 <body>
 <header>
+    <span id="logo"><span class="logoLetter">B</span>uren<span class="logoLetter">B</span>ond</span>
+    <button aria-expanded="false" class="hamburger" id="menu">
+                <span aria-hidden="true" class="icon">
+                    <span></span><span></span><span></span>
+                </span>
+        <span>Menu</span>
+    </button>
     <nav class="nav-bar">
-        <span id="logo"><span class="logoLetter">B</span>uren<span class="logoLetter">B</span>ond</span>
         <ul>
             <li><a href="../">Home</a></li>
             <li><a href="../nieuws-en-evenementen/">Nieuws en evenmenten</a></li>
             <li><a href="../onze-gemeenschap/">Onze gemeenschap</a></li>
-            <li><a href="#">Kaart</a></li>
+            <li><a href="../kaart/">Kaart</a></li>
         </ul>
-        <button>
+        <a id="login" href="../login/" class="fakeBtn">
             <img src="../assets/login.svg" alt="Login svg">
             Login
-        </button>
+        </a>
+
     </nav>
 </header>
 <main>
-    <h1>Kaart</h1>
+    <h1>Detailpagina</h1>
     <section class="container">
-        <img src="../assets/wielrenners.jpg" alt="">
+        <h2>Kaart</h2>
+        <iframe
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Wachtebeke+(map)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+        </iframe>
     </section>
     <section class="container">
         <h2>Festibuurt: Het Buurtfeest van het Jaar!:</h2>
@@ -65,10 +77,10 @@
 <footer>
     <nav>
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Nieuws en evenmenten</a></li>
-            <li><a href="">Onze gemeenschap</a></li>
-            <li><a href="">Kaart</a></li>
+            <li><a href="../">Home</a></li>
+            <li><a href="../nieuws-en-evenementen/">Nieuws en evenmenten</a></li>
+            <li><a href="../onze-gemeenschap/">Onze gemeenschap</a></li>
+            <li><a href="../kaart/">Kaart</a></li>
         </ul>
     </nav>
 </footer>

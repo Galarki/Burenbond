@@ -1,7 +1,7 @@
 import {pool} from '../db.js';
 
-export const getMessages = async (req, res) => {
-    const query = 'SELECT * FROM messages';
+export const getEvents = async (req, res) => {
+    const query = 'SELECT * FROM evenementen';
 
     try {
         const [result] = await pool.query(query);
@@ -10,7 +10,7 @@ export const getMessages = async (req, res) => {
             data: result
         });
     } catch (error) {
-        console.error(`Error fetching messages: ${error}`);
+        console.error(`Error fetching events: ${error}`);
         return res.status(500).json({
             status: 'error',
             message: 'Internal Server Error'
@@ -18,9 +18,10 @@ export const getMessages = async (req, res) => {
         });
     }
 }
-export const getMessage = async (req, res) => {
+
+export const getEvent = async (req, res) => {
     const {id} = req.params;
-    const query = 'SELECT * FROM messages WHERE id = ?';
+    const query = 'SELECT * FROM evenementen WHERE id = ?';
     const values = [id];
 
     try {
@@ -28,7 +29,7 @@ export const getMessage = async (req, res) => {
         if (result.length === 0) {
             return res.status(404).json({
                 status: 'error',
-                message: 'Message not found'
+                message: 'Event not found'
             });
         }
         res.status(201).json({
@@ -36,21 +37,18 @@ export const getMessage = async (req, res) => {
             data: result[0]
         });
     } catch (error) {
-        console.error(`Error fetching message: ${error}`);
+        console.error(`Error fetching event: ${error}`);
         return res.status(500).json({
             status: 'error',
             message: 'Internal Server Error'
         });
     }
-
 }
 
-export const createMessage = async (req, res) => {
-    const {firstname, name, email, message} = req.body;
-    const date = new Date();
-    const query = 'INSERT INTO messages (voornaam, achternaam, email, bericht, datum, titel) VALUES (?, ?, ?, ?, ?, ?)';
-    const title = "title"
-    const values = [firstname, name, email, message, date, title];
+export const createEvent = async (req, res) => {
+    const {titel, korte_tekst, lange_tekst, locatie, datum, tijdstip_begin, tijdstip_einde} = req.body;
+    const query = 'INSERT INTO evenement (titel, korte_tekst, lange_tekst, locatie, datum, tijdstip_begin, tijdstip_einde) VALUES (?, ?, ?, ?, ?, ?, ?)';
+    const values = [titel, korte_tekst, lange_tekst, locatie, datum, tijdstip_begin, tijdstip_einde];
     try {
         const [result] = await pool.query(query, values);
         res.status(201).json({
@@ -60,33 +58,7 @@ export const createMessage = async (req, res) => {
             }
         });
     } catch (error) {
-        console.error(`Error creating message: ${error}`);
-        return res.status(500).json({
-            error: 'error',
-            message: 'Internal Server Error'
-        });
-    }
-}
-
-export const deleteMessage = async (req, res) => {
-    const { id } = req.params;
-    const query = 'DELETE FROM messages WHERE ID = ?';
-    const values = [id];
-
-    try {
-        const [result] = await pool.query(query, values);
-        if (result.affectedRows === 0) {
-            return res.status(404).json({
-                status: 'error',
-                message: 'Message not found'
-            });
-        }
-        res.status(200).json({
-            status: 'success',
-            data: 'Message deleted successfully'
-        });
-    } catch (error) {
-        console.error(`Error deleting message: ${error}`);
+        console.error(`Error creating event: ${error}`);
         return res.status(500).json({
             status: 'error',
             message: 'Internal Server Error'
@@ -94,3 +66,28 @@ export const deleteMessage = async (req, res) => {
     }
 }
 
+export const deleteEvent = async (req, res) => {
+    const {id} = req.params;
+    const query = 'DELETE FROM evenementen WHERE id = ?';
+    const values = [id];
+
+    try {
+        const [result] = await pool.query(query, values);
+        if (result.affectedRows === 0) {
+            return res.status(404).json({
+                status: 'error',
+                message: 'Event not found'
+            });
+        }
+        res.status(201).json({
+            status: 'success',
+            message: 'Event deleted'
+        });
+    } catch (error) {
+        console.error(`Error deleting event: ${error}`);
+        return res.status(500).json({
+            status: 'error',
+            message: 'Internal Server Error'
+        });
+    }
+}

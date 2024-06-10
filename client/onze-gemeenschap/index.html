@@ -11,23 +11,31 @@
 </head>
 <body>
 <header>
+    <span id="logo"><span class="logoLetter">B</span>uren<span class="logoLetter">B</span>ond</span>
+    <button aria-expanded="false" class="hamburger" id="menu">
+                <span aria-hidden="true" class="icon">
+                    <span></span><span></span><span></span>
+                </span>
+        <span>Menu</span>
+    </button>
     <nav class="nav-bar">
-        <span id="logo"><span class="logoLetter">B</span>uren<span class="logoLetter">B</span>ond</span>
         <ul>
             <li><a href="../">Home</a></li>
             <li><a href="../nieuws-en-evenementen/">Nieuws en evenmenten</a></li>
-            <li><a href="#">Onze gemeenschap</a></li>
+            <li><a href="../onze-gemeenschap/">Onze gemeenschap</a></li>
             <li><a href="../kaart/">Kaart</a></li>
         </ul>
-        <button>
+        <a id="login" href="../login/" class="fakeBtn">
             <img src="../assets/login.svg" alt="Login svg">
             Login
-        </button>
+        </a>
+
     </nav>
 </header>
 <main>
-    <section>
-        <h1>Berichten</h1>
+    <h1>Onze gemeenschap</h1>
+    <section class="container berichten">
+        <h2>Berichten van de gemeenschap</h2>
                 <form id="searchFilter" class="search-filter" action="#" novalidate>
                     <div>
                         <label for="search">
@@ -39,7 +47,6 @@
                                name="search"
                                id="search"
                                placeholder="Zoek"
-                               autofocus
                                tabindex="0">
                     </div>
                     <div>
@@ -51,7 +58,6 @@
                         <input type="date"
                                name="date"
                                id="date"
-                               placeholder="Datum"
                                required>
                     </div>
                     <div>
@@ -79,27 +85,6 @@
                         <button id="searchBtn" type="submit">Zoek</button>
                     </div>
                 </form>
-<!--                <div>-->
-<!--                    <h3>Groen in de buurt</h3>-->
-<!--                    <p>Hey medeburen, recentelijk zijn ik en een aantal buren begonnen met onze straat op te fleuren. We hebben-->
-<!--                        al wat bomen, struiken en bloemen geplant en zijn nu bezig met een gemeenschappelijke moestuin op te-->
-<!--                        zetten. Zijn er geïnteresseerden? Zet dan even een reactie.</p>-->
-<!--                    <span>Gepost op 1/05/2024 door Sandra Bull</span>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <h3>Groen in de buurt</h3>-->
-<!--                    <p>Hey medeburen, recentelijk zijn ik en een aantal buren begonnen met onze straat op te fleuren. We hebben-->
-<!--                        al wat bomen, struiken en bloemen geplant en zijn nu bezig met een gemeenschappelijke moestuin op te-->
-<!--                        zetten. Zijn er geïnteresseerden? Zet dan even een reactie.</p>-->
-<!--                    <span>Gepost op 1/05/2024 door Sandra Bull</span>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <h3>Groen in de buurt</h3>-->
-<!--                    <p>Hey medeburen, recentelijk zijn ik en een aantal buren begonnen met onze straat op te fleuren. We hebben-->
-<!--                        al wat bomen, struiken en bloemen geplant en zijn nu bezig met een gemeenschappelijke moestuin op te-->
-<!--                        zetten. Zijn er geïnteresseerden? Zet dan even een reactie.</p>-->
-<!--                    <span>Gepost op 1/05/2024 door Sandra Bull</span>-->
-<!--                </div>-->
         <ul id="messages">
 
         </ul>
@@ -212,10 +197,10 @@
 <footer>
     <nav>
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Nieuws en evenmenten</a></li>
-            <li><a href="">Onze gemeenschap</a></li>
-            <li><a href="">Kaart</a></li>
+            <li><a href="../">Home</a></li>
+            <li><a href="../nieuws-en-evenementen/">Nieuws en evenmenten</a></li>
+            <li><a href="../onze-gemeenschap/">Onze gemeenschap</a></li>
+            <li><a href="../kaart/">Kaart</a></li>
         </ul>
     </nav>
 </footer>

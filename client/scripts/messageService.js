@@ -12,7 +12,7 @@ export const getMessages = async () => {
 
 export const getMessage = async (id) => {
     try {
-        const response = await fetch(`http://localhost:3000/api/v1/messages/${id}`)
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/messages/${id}`)
         const data = await response.json()
         console.log(data);
 
@@ -25,7 +25,7 @@ export const getMessage = async (id) => {
 
 export const postMessage = async (message) => {
     try {
-        const response = await fetch('http://localhost:3000/api/v1/messages', {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/messages`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ export const postMessage = async (message) => {
 };
 export const deleteMessage = async (id) => {
     try {
-        const response = await fetch(`http://localhost:3000/api/v1/messages/${id}`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/messages/${id}`, {
             method: 'DELETE'
         })
         const data = await response.json()
